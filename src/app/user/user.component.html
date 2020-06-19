@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="openRegisterUserPopup()">Register User</button>
+    <div class="col-sm-12">
+      <table class="table table-bordered table table-hover ">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Profile</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; index as i">
+            <th>{{i + 1}}</th>
+            <td><img src="{{user.profile}}" alt=""></td>
+            <td>{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.city}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
